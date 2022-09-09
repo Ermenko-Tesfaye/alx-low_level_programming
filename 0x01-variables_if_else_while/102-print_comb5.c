@@ -22,7 +22,10 @@ int main(void)
 					tmp1 = (num1 * 10) + num2;
 					tmp2 = (num3 * 10) + num4;
 					if (tmp1 >= tmp2)
+					{
+						num4++;
 						continue;
+					}
 					putchar(num1);
 					putchar(num2);
 					putchar(' ');
