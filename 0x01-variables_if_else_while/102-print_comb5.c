@@ -8,13 +8,13 @@ int main(void)
 	int num1 = 48, num2, num3, num4, tmp1, tmp2;
 
 
-	while (num1 < 57)
+	while (num1 < 58)
 	{
 		num2 = 48;
 		while (num2 < 58)
 		{
 			num3 = 48;
-			while (num3 < 57)
+			while (num3 < 58)
 			{
 				num4 = 48;
 				while (num4 < 58)
