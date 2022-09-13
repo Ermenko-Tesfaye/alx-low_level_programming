@@ -5,7 +5,7 @@
  */
 int main(void)
 {
-	long long int i = 1, j = 2, count = 2, temp = 0;
+	long int i = 1, j = 2, count = 2, temp = 0;
 
 	while (temp < 4000000)
 	{
@@ -15,6 +15,6 @@ int main(void)
 		i = j;
 		j = temp;
 	}
-	printf("%lld\n", count);
+	printf("%ld\n", count);
 	return (0);
 }
