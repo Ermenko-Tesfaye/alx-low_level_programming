@@ -8,10 +8,10 @@ int main(void)
 	long int i = 1, j = 2, count, temp;
 
 	printf("1, 2, ");
-	for (count = 0; count < 50; count++)
+	for (count = 0; count < 48; count++)
 	{
 		temp = i + j;
-		if (count != 49)
+		if (count != 47)
 			printf("%lu, ", temp);
 		else
 			printf("%lu", temp);
