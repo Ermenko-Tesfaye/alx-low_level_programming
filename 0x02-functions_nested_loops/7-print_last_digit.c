@@ -1,4 +1,5 @@
 #include "main.h"
+#include <limits.h>
 /**
  * print_last_digit - a fun.. that print the last digit of a num
  * @c: int to be evaluate
