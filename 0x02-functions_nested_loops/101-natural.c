@@ -22,4 +22,5 @@ int main(void)
 			mult += num;
 	print_num(mult);
 	_putchar('\n');
+	return (0);
 }
