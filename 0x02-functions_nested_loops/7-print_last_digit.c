@@ -8,9 +8,9 @@ int print_last_digit(int c)
 {
 	int rem;
 
-	if (c < 0)
-		c *= -1;
 	rem = c % 10;
+	if (rem < 0)
+		rem *= -1;
 	_putchar(rem + 48);
 	return (rem);
 }
