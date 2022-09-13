@@ -5,16 +5,16 @@
  */
 int main(void)
 {
-	long int i = 1, j = 2, count, temp;
+	long double i = 1, j = 2, count, temp;
 
 	printf("1, 2, ");
-	for (count = 0; count < 98; count++)
+	for (count = 0; count < 96; count++)
 	{
 		temp = i + j;
-		if (count != 97)
-			printf("%lu, ", temp);
+		if (count != 95)
+			printf("%.0Lf, ", temp);
 		else
-			printf("%lu", temp);
+			printf("%.0Lf", temp);
 		i = j;
 		j = temp;
 	}
