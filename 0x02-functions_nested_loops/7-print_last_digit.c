@@ -8,6 +8,8 @@ int print_last_digit(int c)
 {
 	int rem;
 
+	if (c == INT_MIN)
+		c = c + 1;
 	if (c < 0)
 		c *= -1;
 	rem = c % 10;
