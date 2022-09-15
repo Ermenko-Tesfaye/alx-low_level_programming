@@ -27,4 +27,6 @@ void print_number(int n)
 		n *= -1;
 		print_mynumber(n);
 	}
+	else
+		print_mynumber(n);
 }
