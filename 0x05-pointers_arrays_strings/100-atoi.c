@@ -7,7 +7,7 @@
  */
 int _atoi(char *s)
 {
-	int i, tot = 0;
+	int i, tot = 0, flag = 0;
 
 	if (s == NULL)
 		return (0);
@@ -16,9 +16,17 @@ int _atoi(char *s)
 		if (s[i] > 47 && s[i] < 58)
 		{
 			if ((i != 0) && (s[i - 1] == '-'))
-				tot += s[i] * -1;
+			{
+				tot += (((int) s[i]) - 48) * -1;
+				flag = 1;
+			}
 			else
-				tot += s[i];
+			{
+				if (flag == 0)
+					tot += ((int) s[i]) - 48;
+				else
+					tot -= ((int) s[i]) - 48;
+			}
 			if (s[i + 1] > 47 && s[i + 1] < 58)
 				tot *= 10;
 			else
