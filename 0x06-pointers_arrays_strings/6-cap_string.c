@@ -7,13 +7,13 @@
 char *cap_string(char *str)
 {
 	int i, j, check;
-	char separ[] = "',', ';', '.', '!', '?', '\"', '(', ')', '{', '}', '\n'";
+	char sep[] = "',', ';', '.', '!', '?', '\"', '(', ')', '{', '}', '\n', '\t'";
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		for (j = 0; separ[j] != '\0'; j++)
+		for (j = 0; sep[j] != '\0'; j++)
 		{
-			if (str[i] == separ[j])
+			if (str[i] == sep[j])
 			{
 				check = i + 1;
 				if (str[check] > 96 && str[check] < 123)
