@@ -6,14 +6,23 @@
  */
 char *rot13(char *str)
 {
-	int i;
+	int i = 0, j;
+	char alp[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char rot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	for (i = 0; str[i] != '\0'; i++)
+	while (str[i])
 	{
-			if (str[i] > 64 && str[i] < 91)
-				str[i] = (((str[i] + 13) - 65) % 26) + 65;
-			else if (str[i] > 96 && str[i] < 123)
-				str[i] = (((str[i] + 13) - 97) % 26) + 97;
+		j = 0;
+		while (alp[j])
+		{
+			if (str[i] == alp[j])
+			{
+				str[i] = rot[j];
+				break;
+			}
+			j++;
+		}
+		i++;
 	}
 	return (str);
 }
