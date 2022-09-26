@@ -7,13 +7,13 @@
  */
 void print_diagsums(int *a, int size)
 {
-	long long int fir, sec;
+	long int fir = 0, sec = 0;
 	int i;
 
 	for (i = 0; i < size; i++)
 	{
-		fir += a[i][i];
-		sec += a[i][size - i - 1];
+		fir += *(a + (i * size) + i);
+		sec += *(a + (i * size) + (size - i - 1));
 	}
-	printf("%lld, %lld\n", fir, sec);
+	printf("%ld, %ld\n", fir, sec);
 }
