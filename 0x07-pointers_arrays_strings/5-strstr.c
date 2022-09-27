@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 /**
  * _strstr - a function that locates a substring.
  * @haystack: parent string
@@ -16,11 +17,11 @@ char *_strstr(char *haystack, char *needle)
 			for (j = 0; *(needle + j); j++)
 			{
 				if (*(needle + j) != *(haystack + i + j))
-					return (0);
+					return (NULL);
 			}
 			if (!(*(needle + j)))
 				return (haystack + i);
 		}
 	}
-	return (0);
+	return (NULL);
 }
