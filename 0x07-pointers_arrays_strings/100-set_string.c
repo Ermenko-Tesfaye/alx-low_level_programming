@@ -7,13 +7,5 @@
  */
 void set_string(char **s, char *to)
 {
-	int i = 0;
-
-	while (*s + i)
-	{
-		if (!(to + i))
-			exit(98);
-		*(*s + i) = *(to + i);
-		i++;
-	}
+	*s = to;
 }
