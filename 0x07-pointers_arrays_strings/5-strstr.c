@@ -18,7 +18,8 @@ char *_strstr(char *haystack, char *needle)
 				if (*(needle + j) != *(haystack + i + j))
 					return (0);
 			}
-			return (haystack + i);
+			if (!(*(needle + j)))
+				return (haystack + i);
 		}
 	}
 	return (0);
