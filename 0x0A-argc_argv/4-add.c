@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <string.h>
 /**
  * main - a program that adds positive numbers
  * @argc: arg counter
@@ -10,19 +11,20 @@
 int main(int argc, char *argv[])
 {
 	int i, x = 0, y;
+	size_t j;
 
 	for (i = 1; i < argc; i++)
 	{
-		if (isdigit(argv[i][0]))
+		for (j = 0; j < strlen(argv[i]); j++)
 		{
-			y = atoi(argv[i]);
-			x += y;
+			if (isdigit(argv[i][j]) == 0)
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
+		y = atoi(argv[i]);
+		x += y;
 	}
 	printf("%d\n", x);
 	return (0);
