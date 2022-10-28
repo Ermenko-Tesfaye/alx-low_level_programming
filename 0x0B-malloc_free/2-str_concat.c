@@ -21,11 +21,15 @@ int _strlen(char *str)
  */
 char *str_concat(char *s1, char *s2)
 {
-	int len = _strlen(s1);
+	int len;
 	int i, j;
 	char *ptr;
 
-	len += _strlen(s2);
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	len = _strlen(s1) + _strlen(s2);
 	ptr = (char *)malloc(sizeof(char) * len + 1);
 	if (ptr == NULL)
 		return (NULL);
